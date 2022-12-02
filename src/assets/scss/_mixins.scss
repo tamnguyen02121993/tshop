@@ -1,0 +1,10 @@
+@mixin flex(
+  $justifyContent: 'flex-start',
+  $alignItems: 'flex-start',
+  $direction: 'row'
+) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justifyContent;
+  align-items: $alignItems;
+}

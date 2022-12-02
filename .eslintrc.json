@@ -18,6 +18,9 @@
       }
     ],
     "react/react-in-jsx-scope": "off",
-    "react/jsx-no-target-blank": "off"
+    "react/jsx-no-target-blank": "off",
+    "no-debugger": "off",
+    "no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars": "off"
   }
 }

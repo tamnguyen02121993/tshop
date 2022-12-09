@@ -1,8 +1,8 @@
+import { Outlet } from 'react-router-dom';
 import './App.css';
-import { AuthorizedLayout } from './components/layouts';
 
 function App() {
-  return <AuthorizedLayout />;
+  return <Outlet />;
 }
 
 export default App;

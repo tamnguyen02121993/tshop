@@ -50,6 +50,6 @@ html {
   @include flex;
 }
 
-.fex-center {
+.flex-center {
   @include flex(center, center);
 }

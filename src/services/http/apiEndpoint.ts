@@ -60,4 +60,9 @@ export const apiEndpoints = {
     updateProductImages: '/api/products/images',
     deleteProduct: (id: string) => `/api/products/${id}`,
   },
+  accounts: {
+    login: '/api/accounts/login',
+    revoke: (name: string) =>
+      `/api/accounts/revoke-token?name=${encodeURIComponent(name)}`,
+  },
 };

@@ -1,14 +1,15 @@
 import { FC } from 'react';
-import { Sidebar } from './';
-import { UserOutlined } from '@ant-design/icons';
-import { Avatar, Divider, Typography } from 'antd';
-import { Link, Outlet } from 'react-router-dom';
+import { Sidebar, UserInfo } from './';
+import { Divider, Typography } from 'antd';
+import { Link, Navigate, Outlet } from 'react-router-dom';
 import './AuthorizedLayout.scss';
+import { useAuth } from '../../hooks';
 
 const { Title } = Typography;
 
 const AuthorizedLayout: FC = () => {
-  return (
+  const { userInfo } = useAuth();
+  return userInfo.isAuthenticated ? (
     <div className="authorized-layout">
       <div className="left-layout">
         <Title level={3} className="heading-text">
@@ -21,8 +22,7 @@ const AuthorizedLayout: FC = () => {
       <div className="right-layout">
         <div className="header">
           <div className="right-header">
-            <span>Tam Nguyen</span>
-            <Avatar icon={<UserOutlined />} />
+            <UserInfo />
           </div>
         </div>
         <div className="content">
@@ -30,6 +30,8 @@ const AuthorizedLayout: FC = () => {
         </div>
       </div>
     </div>
+  ) : (
+    <Navigate to={'/login'} />
   );
 };
 

@@ -4,3 +4,4 @@ export * from './Tags';
 export * from './AppConfigs';
 export * from './Contacts';
 export * from './Products';
+export * from './Authentication';

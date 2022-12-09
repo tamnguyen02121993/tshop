@@ -54,6 +54,10 @@ export const keys = {
     updateProductImages: 'updateProductImages',
     deleteProduct: 'deleteProduct',
   },
+  accounts: {
+    login: 'login',
+    revokeToken: 'revokeToken',
+  },
 };
 
 export const DEFAULT_STATE_TIME = 60000;

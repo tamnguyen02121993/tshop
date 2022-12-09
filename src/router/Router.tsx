@@ -1,5 +1,6 @@
 import { createBrowserRouter } from 'react-router-dom';
-import { AuthorizedLayout } from '../components/layouts';
+import App from '../App';
+import { AuthorizedLayout, UnauthorizedLayout } from '../components/layouts';
 import {
   ListCategories,
   ListTags,
@@ -7,6 +8,7 @@ import {
   ListAppConfigs,
   ListContacts,
   ListProducts,
+  Login,
 } from '../pages';
 
 export const router = createBrowserRouter([
@@ -37,6 +39,16 @@ export const router = createBrowserRouter([
       {
         path: 'products',
         element: <ListProducts />,
+      },
+    ],
+  },
+  {
+    path: '/login',
+    element: <UnauthorizedLayout />,
+    children: [
+      {
+        path: '',
+        element: <Login />,
       },
     ],
   },
